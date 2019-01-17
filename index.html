@@ -24,6 +24,7 @@
     <link href="cg_forms.css" rel="stylesheet" />
 </head>
 
+<!-- The script element adds a link to a javascript page. It provides the code needed in order to make a web form function properly. Also attached various other style sheets necessary for design.-->
 <body>
    <header>
       <img src="cg_logo.png" alt="Computer Graphics and Image Processing" id="logoimg" />
@@ -70,6 +71,8 @@
                             <option value="Assoc. Prof."/>
                         </datalist>
                </div>
+
+               <!-- The form element allows us to put the action in place. The action allows us to provide a place for the data to be processed. The actual form is put inside of a fieldset in order to group related elements together. The label button, literally provides a label for a widget or input field. Below the label is an input field with attributes such as the name, an id, the type which defines what type of input field will be displayed. The list attribute allows for a dropdown to be created. All of the option elements below the input are the choices that will be displayed when the input field is clicked on. -->
           
                 <div>
                     <label for="firstName">First Name*</label>
@@ -103,8 +106,10 @@
           
             <div>
                   <label for="acgipID">ACGIP Membership Number</label>
-                  <input name="" id="idBox" type="text" placeholder="acgip-nnnnnn" pattern="^acgip\-\d{6}$"/>
+                  <input name="acgipID" id="idBox" type="text" placeholder="acgip-nnnnnn" pattern="^acgip\-\d{6}$"/>
             </div>
+
+            <!-- All fields above are sepeatated by divs and have label and input elements. The divs are used for organization purposes. The label element is what is displayed before the input field to tell the user what field it is. The input element displays an input field with some displaying a pattern attribute in order for it be checked against the form for validity before the document is submitted. inputs with the placeholder attribute allows for text to be displayed inside the box by default, but the text disappears once the user starts to type. Typing in required in the field forces the user to fill out the field (correctly) before submission. each input element has an id so that we  can build CSS style rules for them later.  -->
 
           <div>
               <label for="regList">Registration Category</label>
@@ -117,9 +122,13 @@
             </select>
           </div>
 
+          <!-- Uses a label element to label the dropdown menu. using the select element will allow th input field to become a selection list. The option element will provide the choices available when you click a selection. The value attribute specifies the vlaue of the field -->
+
         <p>
                 <input type="submit" value="Continue" />
         </p>
+
+        <!-- Submit button which allows you to transfer the data put into the input fields when clicked -->
         
                 
       </fieldset>
